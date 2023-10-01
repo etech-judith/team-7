@@ -39,6 +39,11 @@
                     }
 
                 }
+                stage(7-artifactbuild){
+                    steps{
+                        echo "end of session"
+                    }
+                }
             }
         }
 	}
