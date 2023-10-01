@@ -26,6 +26,21 @@
                 sh 'free -m'
 			}
 		}
+        stage('5-security check'){
+            steps{
+                sh 'cat /etc/os-release'
+            }
+        }
+        stage('parallel'){
+            parallel{
+                stage('6-deploy'){
+                    steps{
+                        sh 'lscpu'
+                    }
+
+                }
+            }
+        }
 	}
 }		
 
